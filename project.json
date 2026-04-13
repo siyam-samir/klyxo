@@ -1,0 +1,28 @@
+{
+  "overview": "KLYXO is a high-end cinematic movie portal by Alvee Noor Siyam — ultra-dark mobile-first design with gold branding, TMDB integration, voice search, backdrop hero carousel, and seamless scaling from mobile to desktop and Android TV.",
+  "features": [
+    "Ultra-dark cinematic UI (#050505 + gold #E2B159)",
+    "Auto-rotating TMDB backdrop hero carousel",
+    "Voice search via Web Speech API",
+    "YouTube trailer modal popup",
+    "Recently Watched section with progress bars",
+    "Movie & TV grids with golden hover glow",
+    "Mobile bottom nav + desktop fixed sidebar",
+    "Android TV remote focus navigation",
+    "Founder profile card with social links",
+    "TMDB trending, popular, now playing, top rated grids"
+  ],
+  "category": "entertainment",
+  "tags": [
+    "movies",
+    "tv-shows",
+    "cinema",
+    "tmdb",
+    "mobile-first",
+    "dark-theme",
+    "streaming",
+    "react",
+    "framer-motion"
+  ],
+  "last_updated": "2026-04-13T17:45:21.067Z"
+}

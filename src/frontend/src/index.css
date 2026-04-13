@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Pacifico&family=Oswald:wght@200;400;600;700&family=Rubik+Dirt&family=Share+Tech+Mono&family=Special+Elite&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Cinzel Decorative", serif;
+    --font-body: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      sans-serif;
+    --font-mono: "Share Tech Mono", monospace;
+    --radius: 0.625rem;
+
+    --background: 0.05 0 0;
+    --foreground: 0.88 0 0;
+    --card: 0.08 0 0;
+    --card-foreground: 0.88 0 0;
+    --popover: 0.12 0 0;
+    --popover-foreground: 0.88 0 0;
+
+    --primary: 0.67 0.15 90;
+    --primary-foreground: 0.05 0 0;
+
+    --secondary: 0.12 0 0;
+    --secondary-foreground: 0.8 0 0;
+    --muted: 0.12 0 0;
+    --muted-foreground: 0.55 0 0;
+
+    --accent: 0.67 0.15 90;
+    --accent-foreground: 0.05 0 0;
+
+    --destructive: 0.35 0.12 10;
+    --destructive-foreground: 0.88 0 0;
+
+    --border: 0.15 0 0;
+    --input: 0.15 0 0;
+    --ring: 0.67 0.15 90;
+
+    --chart-1: 0.67 0.15 90;
+    --chart-2: 0.35 0.12 10;
+    --chart-3: 0.5 0.08 0;
+    --chart-4: 0.65 0.1 45;
+    --chart-5: 0.7 0.12 200;
+
+    --sidebar: 0.08 0 0;
+    --sidebar-foreground: 0.88 0 0;
+    --sidebar-primary: 0.67 0.15 90;
+    --sidebar-primary-foreground: 0.05 0 0;
+    --sidebar-accent: 0.12 0 0;
+    --sidebar-accent-foreground: 0.8 0 0;
+    --sidebar-border: 0.15 0 0;
+    --sidebar-ring: 0.67 0.15 90;
+
+    --gold-glow: 0 0 15px rgba(226, 177, 89, 0.3);
+    --gold-glow-lg: 0 0 24px rgba(226, 177, 89, 0.5);
+    --red-glow: radial-gradient(
+      ellipse at center,
+      rgba(80, 0, 0, 0.4) 0%,
+      transparent 70%
+    );
+  }
+
+  .dark {
+    --background: 0.05 0 0;
+    --foreground: 0.88 0 0;
+    --card: 0.08 0 0;
+    --card-foreground: 0.88 0 0;
+    --popover: 0.12 0 0;
+    --popover-foreground: 0.88 0 0;
+
+    --primary: 0.67 0.15 90;
+    --primary-foreground: 0.05 0 0;
+
+    --secondary: 0.12 0 0;
+    --secondary-foreground: 0.8 0 0;
+    --muted: 0.12 0 0;
+    --muted-foreground: 0.55 0 0;
+
+    --accent: 0.67 0.15 90;
+    --accent-foreground: 0.05 0 0;
+
+    --destructive: 0.35 0.12 10;
+    --destructive-foreground: 0.88 0 0;
+
+    --border: 0.15 0 0;
+    --input: 0.15 0 0;
+    --ring: 0.67 0.15 90;
+
+    --chart-1: 0.67 0.15 90;
+    --chart-2: 0.35 0.12 10;
+    --chart-3: 0.5 0.08 0;
+    --chart-4: 0.65 0.1 45;
+    --chart-5: 0.7 0.12 200;
+
+    --sidebar: 0.08 0 0;
+    --sidebar-foreground: 0.88 0 0;
+    --sidebar-primary: 0.67 0.15 90;
+    --sidebar-primary-foreground: 0.05 0 0;
+    --sidebar-accent: 0.12 0 0;
+    --sidebar-accent-foreground: 0.8 0 0;
+    --sidebar-border: 0.15 0 0;
+    --sidebar-ring: 0.67 0.15 90;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Golden glow effects */
+  .glow-gold {
+    box-shadow: var(--gold-glow);
+  }
+
+  .glow-gold-lg {
+    box-shadow: var(--gold-glow-lg);
+  }
+
+  /* Focus states for TV remote navigation */
+  .focus-gold {
+    @apply outline-2 outline-offset-2;
+    outline-color: oklch(var(--primary));
+  }
+
+  /* Founder photo golden border glow */
+  .founder-photo {
+    border: 2px solid oklch(var(--primary));
+    box-shadow: var(--gold-glow-lg);
+  }
+
+  /* Dark red ambient glow for hero sections */
+  .glow-red-ambient {
+    background: var(--red-glow);
+  }
+
+  /* Stencil text with letter-spacing and stroke */
+  .stencil-title {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.15em;
+    -webkit-text-stroke: 0.5px oklch(var(--primary));
+  }
+
+  /* Groovy script header */
+  .groovy-header {
+    font-family: "Pacifico", cursive;
+  }
+
+  /* Distressed rating font */
+  .distressed-rating {
+    font-family: "Rubik Dirt", cursive;
+  }
+
+  /* Technical metadata font */
+  .tech-metadata {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: oklch(var(--muted-foreground));
+  }
+
+  /* Card hover scale */
+  .card-hover {
+    @apply transition-smooth hover:scale-105;
+  }
+
+  /* Smooth scale animation on hover */
+  @keyframes smooth-scale {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.05);
+    }
+  }
+
+  .animate-smooth-scale {
+    animation: smooth-scale 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
